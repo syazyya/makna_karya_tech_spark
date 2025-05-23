@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useRef, useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/common/Navbar';
+import NewsPage from './pages/NewsPage';
+import About from './pages/About';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import MainPage from './pages/MainPage';  // Ganti path import
 
 function App() {
+  const navbarRef = useRef(null);
+  const [navHeight, setNavHeight] = useState(0);
+
+  useEffect(() => {
+    AOS.init({ once: true, duration: 800 });
+  }, []);
+
+  useEffect(() => {
+    const updateNavHeight = () => {
+      if (navbarRef.current) {
+        setNavHeight(navbarRef.current.offsetHeight);
+      }
+    };
+    updateNavHeight();
+    window.addEventListener('resize', updateNavHeight);
+    return () => window.removeEventListener('resize', updateNavHeight);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar ref={navbarRef} />
+      <Routes>
+        <Route path="/" element={<MainPage navHeight={navHeight} />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/news" element={<NewsPage />} />
+      </Routes>
+    </>
   );
 }
 
