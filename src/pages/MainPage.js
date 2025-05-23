@@ -12,6 +12,10 @@ export default function MainPage() {
         <Hero />
       </section>
 
+      <section id="media">
+        <Media /> 
+      </section>
+
       <section id="join">
         <JoinUsForm />  
       </section>
