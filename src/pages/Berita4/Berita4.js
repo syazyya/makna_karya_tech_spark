@@ -7,7 +7,7 @@ function App() {
     <div className="bg-gray-100 text-gray-800 p-6 rounded-lg max-w-4xl mx-auto mt-10">
       <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-6">
         <img 
-          src="https://source.unsplash.com/800x400/?gaming,indonesia" 
+          src=""https://www.baker.edu/wp-content/uploads/how-to-become-a-game-developer.jpg" 
           alt="Game Developer Indonesia" 
           className="w-full h-64 object-cover rounded-md mb-6"
         />
