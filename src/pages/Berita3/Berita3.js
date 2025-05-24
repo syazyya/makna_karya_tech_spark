@@ -4,7 +4,20 @@ import Footer from '../../components/Section/Footer'; // Import your Footer comp
 
 function App() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-100 flex flex-col"> {/* Main container with flex column layout */}
+=======
+    <div className="bg-gray-100 text-gray-800 p-6 rounded-lg max-w-4xl mx-auto mt-10">
+      <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8">
+        <img 
+          src="https://dashboard.primakara.ac.id/uploads/full_stack_developer_adalah_28fc15e4c2.jpeg"
+          alt="Programmer Illustration" 
+          className="w-full h-64 object-cover rounded-md mb-6"
+        />
+        <h1 className="text-3xl font-bold text-gray-800 mb-4">
+          5 Tips untuk Menjadi Programmer yang Lebih Baik
+        </h1>
+>>>>>>> b9de4e2cc6238802e3650529a347a9e964e1a606
 
       {/* Content container with flex-grow to push footer down */}
       <div className="flex-grow py-10 px-4" data-aos="fade-up">

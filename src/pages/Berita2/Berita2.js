@@ -4,7 +4,26 @@ import Footer from '../../components/Section/Footer'; // Make sure to import you
 
 function App() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-100 flex flex-col"> {/* Main container with flex column layout */}
+=======
+    
+    <div className="bg-gray-100 text-gray-800 p-6 rounded-lg max-w-4xl mx-auto mt-10">
+      
+  
+      <h1 className="text-3xl font-bold text-gray-800 mb-6">
+        Pertimbangan Jadi Ahli Front End, Back End, atau DevOps?
+      </h1>
+      <img 
+        src="https://dashboard.primakara.ac.id/uploads/full_stack_developer_adalah_28fc15e4c2.jpeg" 
+        alt="Ilustrasi pengembangan perangkat lunak"
+        className="w-full h-auto rounded-md mb-8"
+      />
+      
+      <p className="text-gray-700 text-base leading-relaxed mb-6">
+        Dalam era digital saat ini, kebutuhan akan pengembang perangkat lunak semakin meningkat. Namun, banyak orang yang masih bingung memilih jalur karier di dunia IT: apakah menjadi ahli Front End, Back End, atau DevOps? Ketiga jalur ini memiliki fokus dan tanggung jawab yang berbeda, serta membutuhkan skill set yang unik. Memahami karakteristik dan tantangan masing-masing peran sangat penting sebelum menentukan pilihan.
+      </p>
+>>>>>>> b9de4e2cc6238802e3650529a347a9e964e1a606
 
       {/* Content container with flex-grow to push footer down */}
       <div className="flex-grow flex justify-center items-start px-4 py-10" data-aos="fade-up">

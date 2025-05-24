@@ -4,7 +4,19 @@ import Footer from '../../components/Section/Footer';
 
 function App() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-100 flex flex-col"> {/* Main flex container */}
+=======
+    <div className="bg-gray-100 text-gray-800 p-6 rounded-lg max-w-4xl mx-auto mt-10">
+
+      <img 
+          src="https://contentwriters.com/blog/wp-content/uploads/content-writer-750x500.jpg" 
+          alt="Game Developer Indonesia" 
+          className="w-full h-64 object-cover rounded-md mb-6"
+        />
+        
+    <h1 className="text-3xl font-semibold text-center text-blue-600 mb-6">Klarifikasi, Elaborasi, dan Editing: Teknik bagi Content Writer yang Menggunakan AI</h1>
+>>>>>>> b9de4e2cc6238802e3650529a347a9e964e1a606
 
       {/* Content area with flex-grow */}
       <div className="flex-grow py-10 px-4" data-aos="fade-up">
