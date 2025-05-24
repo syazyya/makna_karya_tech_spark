@@ -1,5 +1,22 @@
 # Getting Started with Create React App
 
+
+
+| Section         | Kolaborasi       |
+| --------------- | ---------------- |
+| Navigation Bar  | Ikang            |
+| Hero Section    | Sagara           |
+| About Section   | Hasya            |
+| Media Section   | Agni             |
+| Join Us Section | Ikang            |
+| Footer          | Sagara           |
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

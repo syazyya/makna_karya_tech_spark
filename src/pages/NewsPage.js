@@ -41,18 +41,18 @@ export default function NewsPage() {
             Kolaborasi ini juga menunjukkan kesiapan Indonesia dalam menyambut era industri 5.0 yang berpusat pada sinergi antara manusia dan teknologi pintar.
           </p>
 
-          {/* <Link
+          <Link
               to="/news"
               onClick={() => window.scrollTo(0, 0)}
               className="inline-block mt-4 text-blue-600 hover:underline"
             >
               ← Kembali ke Menu News
-            </Link> */}
+            </Link>
 
         </div>
 
         {/* Kolom News Terkini */}
-        {/* <div className="flex-1">
+        <div className="flex-1">
           <h3 className="text-xl font-bold mb-4">RECENT NEWS</h3>
           <ul className="list-disc list-inside text-blue-700 space-y-2">
             <li>
@@ -88,7 +88,7 @@ export default function NewsPage() {
               </Link>
             </li>
           </ul>
-        </div> */}
+        </div>
       </div>
     </div>
   );

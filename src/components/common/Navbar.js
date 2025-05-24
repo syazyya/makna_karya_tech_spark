@@ -1,24 +1,24 @@
 import React, { useState, useEffect, forwardRef, useCallback } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import logo from '../../assets/Logo.png';
 import { throttle } from 'lodash';
+import logo from '../../assets/Logo.png';
 
 /**
- * Komponen NavLink yang bisa digunakan kembali untuk tampilan link yang konsisten
- * @param {string} label - Teks yang ditampilkan pada link
- * @param {string} to - Tujuan URL atau hash link
- * @param {boolean} highlight - Apakah link ditampilkan sebagai tombol yang menonjol
- * @param {'route'|'scroll'} type - Jenis link (navigasi route atau scroll ke section)
- * @param {boolean} active - Apakah link sedang aktif
- * @param {function} onClick - Fungsi yang dijalankan saat link diklik
+ * Komponen NavLink yang bisa digunakan ulang untuk tampilan konsisten
+ * @param {string} label - Teks yang ditampilkan
+ * @param {string} to - Tujuan URL atau hash
+ * @param {boolean} highlight - Jika true, tampilkan sebagai tombol highlight
+ * @param {'route'|'scroll'} type - Jenis navigasi (route atau scroll)
+ * @param {boolean} active - Status aktif/non-aktif link
+ * @param {function} onClick - Fungsi ketika diklik
  */
 const NavLink = ({ label, to, highlight, type, active, onClick }) => {
-  // Kelas dasar untuk styling semua link
+  // Kelas dasar untuk semua link
   let baseClass = 'transition font-medium block';
 
-  // Styling kondisional berdasarkan jenis link dan state
+  // Tambahkan kelas sesuai kondisi
   if (highlight) {
-    baseClass += ' bg-blue-600 text-white px-6 py-2 rounded-xl shadow hover:bg-red-700';
+    baseClass += ' bg-blue-600 text-white px-6 py-2 rounded-xl shadow hover:bg-blue-700';
   } else if (type === 'route') {
     baseClass += active
       ? ' text-blue-600 hover:text-blue-700'
@@ -29,7 +29,7 @@ const NavLink = ({ label, to, highlight, type, active, onClick }) => {
       : ' text-gray-700 hover:text-blue-600';
   }
 
-  // Render link sebagai <Link> untuk navigasi atau <a> untuk scroll
+  // Render sebagai Link untuk navigasi atau tag <a> untuk scroll
   return type === 'route' ? (
     <Link to={to} onClick={onClick} className={baseClass}>
       {label}
@@ -42,18 +42,20 @@ const NavLink = ({ label, to, highlight, type, active, onClick }) => {
 };
 
 /**
- * Komponen Navbar utama
- * Menggunakan forwardRef untuk mengakses ref dari komponen parent
+ * Komponen Navbar utama dengan fitur:
+ * - Responsive (mobile & desktop)
+ * - Scroll-aware navigation
+ * - Auto-hide on scroll
  */
 const Navbar = forwardRef((props, ref) => {
-  // State untuk mengontrol tampilan navbar
-  const [isScrolled, setIsScrolled] = useState(false); // Apakah halaman di-scroll
-  const [menuOpen, setMenuOpen] = useState(false); // State menu mobile (buka/tutup)
-  const [activeSection, setActiveSection] = useState(''); // Section yang sedang aktif
-  const location = useLocation(); // Hook untuk mendapatkan lokasi/rute saat ini
-  const navigate = useNavigate(); // Hook untuk navigasi programmatic
+  // State management
+  const [isScrolled, setIsScrolled] = useState(false); // Untuk efek scroll navbar
+  const [menuOpen, setMenuOpen] = useState(false); // Toggle menu mobile
+  const [activeSection, setActiveSection] = useState(''); // Section yang aktif
+  const location = useLocation(); // Lokasi saat ini
+  const navigate = useNavigate(); // Fungsi navigasi
 
-  // Daftar link navbar
+  // Daftar link navigasi
   const navLinks = [
     { label: 'Home', to: '/', type: 'route' },
     { label: 'About', to: '/about', type: 'route' },
@@ -63,8 +65,7 @@ const Navbar = forwardRef((props, ref) => {
   ];
 
   /**
-   * Fungsi untuk scroll ke atas halaman
-   * Menggunakan smooth scroll behavior
+   * Scroll ke atas halaman dengan efek smooth
    */
   const scrollToTop = useCallback(() => {
     window.scrollTo({
@@ -74,67 +75,74 @@ const Navbar = forwardRef((props, ref) => {
   }, []);
 
   /**
-   * Handler klik logo
-   * - Jika sudah di halaman home: scroll ke atas
-   * - Jika di halaman lain: navigasi ke home lalu scroll ke atas
+   * Handle ketika logo diklik
+   * - Jika sudah di home, scroll ke atas
+   * - Jika di halaman lain, navigasi ke home
    */
   const handleLogoClick = useCallback((e) => {
     if (location.pathname === '/') {
       e.preventDefault();
       scrollToTop();
-    } else {
-      navigate('/', { state: { shouldScrollToTop: true } });
     }
-    setMenuOpen(false); // Tutup menu mobile jika terbuka
-  }, [location.pathname, navigate, scrollToTop]);
+    setMenuOpen(false); // Tutup menu mobile
+  }, [location.pathname, scrollToTop]);
 
   /**
-   * Handler klik link Home
-   * - Jika sudah di home: scroll ke atas
-   * - Jika di halaman lain: biarkan navigasi default bekerja
+   * Handle ketika link Home diklik
    */
   const handleHomeClick = useCallback((e) => {
     if (location.pathname === '/') {
       e.preventDefault();
       scrollToTop();
     }
-    setMenuOpen(false); // Tutup menu mobile jika terbuka
+    setMenuOpen(false);
   }, [location.pathname, scrollToTop]);
 
   /**
-   * Effect untuk menangani scroll ke atas setelah navigasi
-   * Dipicu ketika ada state shouldScrollToTop
+   * Handle navigasi ke section tertentu
+   * @param {string} target - ID section tujuan (tanpa #)
    */
-  useEffect(() => {
-    if (location.state?.shouldScrollToTop) {
-      scrollToTop();
-      // Reset state untuk menghindari scroll yang tidak diinginkan
-      navigate(location.pathname, { replace: true, state: {} });
+  const handleScrollClick = useCallback((target) => {
+    // Jika tidak di home, navigasi ke home dulu dengan state scrollTo
+    if (location.pathname !== '/') {
+      navigate('/', { state: { scrollTo: target } });
+    } else {
+      // Jika sudah di home, langsung scroll ke section
+      const element = document.getElementById(target);
+      if (element) {
+        // Scroll dengan offset untuk navbar fixed
+        window.scrollTo({
+          top: element.offsetTop - 70, // 70px = tinggi navbar
+          behavior: 'smooth'
+        });
+      }
     }
-  }, [location, navigate, scrollToTop]);
+    setMenuOpen(false); // Tutup menu mobile
+  }, [location.pathname, navigate]);
 
   /**
-   * Effect untuk mendeteksi scroll dan mengupdate:
-   * - State isScrolled (untuk mengubah style navbar)
-   * - Section yang sedang aktif (untuk highlight menu)
+   * Effect untuk handle scroll event
+   * - Update state isScrolled
+   * - Deteksi section yang aktif
    */
   useEffect(() => {
-    const handleScroll = () => {
-      // Update state isScrolled berdasarkan posisi scroll
+    const handleScroll = throttle(() => {
+      // Cek jika halaman di-scroll > 10px
       setIsScrolled(window.scrollY > 10);
 
-      // Hanya cek section aktif jika di halaman home
+      // Hanya deteksi section jika di home page
       if (location.pathname !== '/') return;
 
-      const sections = ['home', 'about', 'media', 'news', 'join'];
+      const sections = ['home', 'media', 'join'];
       let current = '';
 
-      // Cari section yang sedang terlihat di viewport
+      // Cari section yang sedang visible di viewport
       for (const id of sections) {
         const el = document.getElementById(id);
         if (el) {
           const rect = el.getBoundingClientRect();
-          if (rect.top <= 80 && rect.bottom >= 80) {
+          // Section dianggap aktif jika berada di tengah viewport
+          if (rect.top <= 100 && rect.bottom >= 100) {
             current = id;
             break;
           }
@@ -142,42 +150,34 @@ const Navbar = forwardRef((props, ref) => {
       }
 
       setActiveSection(current);
-    };
+    }, 100); // Throttle 100ms untuk performa
 
-    // Gunakan throttle untuk membatasi frekuensi pemanggilan handleScroll
-    const throttledScroll = throttle(handleScroll, 100);
-    window.addEventListener('scroll', throttledScroll);
-    handleScroll(); // Panggil sekali di awal untuk set state awal
+    // Pasang event listener
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Panggil sekali di awal
 
-    // Cleanup: hapus event listener ketika komponen unmount
-    return () => window.removeEventListener('scroll', throttledScroll);
+    // Cleanup
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [location]);
 
   /**
-   * Fungsi untuk render setiap link navbar
-   * Menangani logika klik dan styling aktif
+   * Fungsi untuk render setiap link navigasi
+   * @param {object} link - Konfigurasi link
    */
   const renderLink = (link) => {
-    // Tentukan apakah link sedang aktif
+    // Tentukan apakah link aktif
     const isActive = link.type === 'route'
-      ? location.pathname === link.to
-      : activeSection === link.to.replace('#', '') && location.pathname === '/';
+      ? location.pathname === link.to // Aktif jika route match
+      : activeSection === link.to.replace('#', '') && location.pathname === '/'; // Aktif jika section visible
 
-    // Handler klik untuk link
+    // Handler ketika link diklik
     const handleClick = (e) => {
       if (link.type === 'scroll') {
-        // Untuk link scroll, cegah navigasi default
         e.preventDefault();
-        const el = document.querySelector(link.to);
-        if (el) {
-          // Scroll ke section yang dituju dengan offset untuk navbar
-          window.scrollTo({ top: el.offsetTop - 70, behavior: 'smooth' });
-        }
+        handleScrollClick(link.to.replace('#', ''));
       } else if (link.to === '/') {
-        // Khusus link Home, gunakan handler khusus
         handleHomeClick(e);
       }
-      setMenuOpen(false); // Tutup menu mobile setelah klik
     };
 
     return (
@@ -193,12 +193,13 @@ const Navbar = forwardRef((props, ref) => {
     );
   };
 
-  // Render komponen Navbar
   return (
     <header
       ref={ref}
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow' : 'bg-white/80 backdrop-blur-md'
-        }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        // Efek ketika di-scroll
+        isScrolled ? 'bg-white shadow' : 'bg-white/80 backdrop-blur-md'
+      }`}
     >
       {/* Container utama navbar */}
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -207,7 +208,7 @@ const Navbar = forwardRef((props, ref) => {
           to="/"
           onClick={handleLogoClick}
           className="flex items-center gap-2 hover:opacity-80 transition"
-          aria-label="Scroll to top"
+          aria-label="Home"
           state={{ shouldScrollToTop: true }}
         >
           <img src={logo} alt="Logo" className="h-8 w-8 object-contain" />
@@ -237,11 +238,12 @@ const Navbar = forwardRef((props, ref) => {
         </button>
       </div>
 
-      {/* Menu mobile */}
+      {/* Menu mobile (toggle dengan state menuOpen) */}
       <div
         id="mobile-menu"
-        className={`md:hidden absolute top-full left-0 w-full bg-white shadow-md px-6 py-4 space-y-4 z-40 transition-all duration-300 ${menuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
-          }`}
+        className={`md:hidden absolute top-full left-0 w-full bg-white shadow-md px-6 py-4 space-y-4 transition-all duration-300 ${
+          menuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
+        }`}
         aria-hidden={!menuOpen}
       >
         {navLinks.map(renderLink)}

@@ -67,16 +67,6 @@ export default function Hero({ navHeight = 0 }) {
     }
   ];
 
-  // Data untuk partner logos
-  const partners = [
-    '/prelo.png',
-    '/goers.png',
-    '/startup-bandung.png',
-    '/efishery.png',
-    '/geek-hunter.png',
-    '/git.webp'
-  ];
-
   return (
     <section
       id="home"
@@ -182,7 +172,7 @@ export default function Hero({ navHeight = 0 }) {
               </div>
 
               {/* Right Column - Content */}
-              <div className="lg:w-1/2  rounded-xl p-8 sm:p-12 bg-white shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-transparent" data-aos="fade-left">
+              <div className="lg:w-1/2 rounded-xl p-8 sm:p-12 bg-white shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-transparent" data-aos="fade-left">
                 <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                   TechSpark Program
                 </h3>
@@ -233,9 +223,10 @@ export default function Hero({ navHeight = 0 }) {
           </div>
         </div>
 
+        {/* Hiring Network & Partners Section */}
         <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] rounded-xl shadow-lg overflow-hidden bg-white" data-aos="fade-up">
           {/* Kolom Kiri (Hiring Network - 60%) */}
-          <div className="relative p-10 sm:p-14 bg-gradient-to-br from-gray-900 to-blue-900 text-white" >
+          <div className="relative p-10 sm:p-14 bg-gradient-to-br from-gray-900 to-blue-900 text-white">
             {/* Tech Pattern Background */}
             <div
               className="absolute inset-0 opacity-20"
@@ -278,9 +269,10 @@ export default function Hero({ navHeight = 0 }) {
                 </a>
               </div>
             </div>
+
           </div>
 
-          {/* Kolom Kanan (Partner - 40%) - Menyatu tanpa gap */}
+          {/* Kolom Kanan (Partner - 40%) */}
           <div className="bg-gray-50 p-10 sm:p-14 border-l border-gray-200">
             <h4 className="text-2xl font-semibold text-gray-900 mb-6">Collaborating Network</h4>
             <p className="text-gray-700 mb-6">
@@ -324,10 +316,10 @@ export default function Hero({ navHeight = 0 }) {
             </div>
           </div>
         </div>
-        <br />
+        <br/>
       </div>
 
-      {/* Wave */}
+      {/* Wave Bottom */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden">
         <svg className="relative block w-[200%] h-24 sm:h-32" viewBox="0 0 1440 150" preserveAspectRatio="none">
           <path
