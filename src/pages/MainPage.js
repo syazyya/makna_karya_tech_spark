@@ -13,11 +13,11 @@ export default function MainPage() {
       </section>
 
       <section id="media">
-        <Media /> 
+        <Media />
       </section>
 
       <section id="join">
-        <JoinUsForm />  
+        <JoinUsForm />
       </section>
 
       {/* Main Content */}

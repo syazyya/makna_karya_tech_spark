@@ -19,7 +19,7 @@ export default function About() {
       photo: FarisPhoto,
       details: "Lebih dari 10 tahun pengalaman di bidang teknologi dan bisnis. Pendiri beberapa startup sukses dan aktif sebagai mentor di berbagai program akselerator bisnis. Berpengalaman dalam membangun strategi pemasaran digital dan pertumbuhan bisnis berbasis teknologi.",
       achievements: [
-        
+
       ]
     },
     {
@@ -30,7 +30,7 @@ export default function About() {
       photo: RestuPhoto,
       details: "Seorang tech enthusiast yang memiliki latar belakang pendidikan teknik informatika dan manajemen bisnis. Tertarik dalam pengembangan produk berbasis teknologi yang berorientasi pada solusi. Melihat kemajuan peradaban di masa depan terletak pada kemajuan teknologi.",
       achievements: [
-       
+
       ]
     }
   ];
@@ -69,10 +69,10 @@ export default function About() {
               </p>
             </div>
             <div className="text-center">
-              <img 
-                src={aboutImage} 
-                alt="About TechSpark" 
-                className="mx-auto w-full max-w-xs sm:max-w-sm md:max-w-md" 
+              <img
+                src={aboutImage}
+                alt="About TechSpark"
+                className="mx-auto w-full max-w-xs sm:max-w-sm md:max-w-md"
                 data-aos="fade-left"
               />
             </div>
@@ -113,14 +113,14 @@ export default function About() {
             <h3 className="text-2xl font-bold mb-6">Our Leaders</h3>
             <div className="grid gap-8 md:grid-cols-2">
               {leaders.map((leader) => (
-                <div 
+                <div
                   key={leader.id}
                   onClick={() => openModal(leader)}
                   className="text-center bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow cursor-pointer"
                 >
-                  <img 
-                    src={leader.photo} 
-                    alt={leader.name} 
+                  <img
+                    src={leader.photo}
+                    alt={leader.name}
                     className="w-28 h-28 rounded-full mx-auto mb-4 object-cover border-4 border-blue-100"
                   />
                   <h4 className="font-bold text-lg text-gray-800">{leader.name}</h4>
@@ -141,14 +141,14 @@ export default function About() {
       {/* Leader Modal */}
       {isModalOpen && selectedLeader && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div 
+          <div
             className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="p-8">
               <div className="flex justify-between items-start mb-6">
                 <h3 className="text-2xl font-bold text-gray-800">{selectedLeader.name}</h3>
-                <button 
+                <button
                   onClick={closeModal}
                   className="text-gray-500 hover:text-gray-700 transition-colors"
                   aria-label="Close modal"
@@ -158,25 +158,25 @@ export default function About() {
                   </svg>
                 </button>
               </div>
-              
+
               <div className="flex flex-col md:flex-row gap-8">
                 <div className="flex-shrink-0">
-                  <img 
-                    src={selectedLeader.photo} 
-                    alt={selectedLeader.name} 
+                  <img
+                    src={selectedLeader.photo}
+                    alt={selectedLeader.name}
                     className="w-40 h-40 rounded-full object-cover border-4 border-blue-100 mx-auto"
                   />
                 </div>
                 <div className="space-y-4">
                   <p className="text-blue-600 font-medium text-lg">{selectedLeader.role}</p>
                   <p className="text-gray-700">{selectedLeader.bio}</p>
-                  
+
                   <div className="bg-blue-50 p-4 rounded-lg">
                     <h4 className="font-semibold mb-2 text-gray-800">Detailed Profile</h4>
                     <p className="text-gray-600">{selectedLeader.details}</p>
                   </div>
 
-                  
+
                 </div>
               </div>
             </div>

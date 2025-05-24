@@ -316,7 +316,7 @@ export default function Hero({ navHeight = 0 }) {
             </div>
           </div>
         </div>
-        <br/>
+        <br />
       </div>
 
       {/* Wave Bottom */}

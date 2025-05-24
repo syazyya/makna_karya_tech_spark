@@ -39,14 +39,14 @@ function App() {
         <Route path="/" element={<MainPage navHeight={navHeight} />} />
         <Route path="/about" element={<About />} />
         <Route path="/news" element={<NewsPage />} />
-        
+
         <Route path="/berita1" element={<Berita1 />} />
         <Route path="/berita2" element={<Berita2 />} />
         <Route path="/berita3" element={<Berita3 />} />
         <Route path="/berita4" element={<Berita4 />} />
-        <Route path="/berita5" element={<Berita5 />} />      
-  
-  </Routes>
+        <Route path="/berita5" element={<Berita5 />} />
+
+      </Routes>
     </>
   );
 }

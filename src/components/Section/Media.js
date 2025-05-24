@@ -216,7 +216,7 @@ function MediaModal({ item, onClose }) {
                             {item.description}
                         </p>
 
-                        
+
                     </div>
                 </div>
             </div>
