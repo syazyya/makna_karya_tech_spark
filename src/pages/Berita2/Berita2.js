@@ -12,7 +12,7 @@ function App() {
         Pertimbangan Jadi Ahli Front End, Back End, atau DevOps?
       </h1>
       <img 
-        src="https://via.placeholder.com/800x400.png?text=Pengembangan+Perangkat+Lunak" 
+        src="https://dashboard.primakara.ac.id/uploads/full_stack_developer_adalah_28fc15e4c2.jpeg" 
         alt="Ilustrasi pengembangan perangkat lunak"
         className="w-full h-auto rounded-md mb-8"
       />
