@@ -16,6 +16,48 @@ export default function NewsPage() {
           />
         </div>
 
+   <div className="flex-1 pt-8">
+
+        <h1>RECENT NEWS</h1>
+
+        <ul>
+
+          <li>
+            <Link to="/berita1" className="hover:underline"
+                      onClick={() => window.scrollTo(0, 0)}                         >
+                  1. Indonesia siap merilis AI Garuda, Setara ChatGPT
+            </Link>
+          </li>
+
+            <Link to="/berita2" className="hover:underline"
+                      onClick={() => window.scrollTo(0, 0)}                         >
+                  2. Pertimbangan Jadi Ahli Front End, Back End, atau DevOps
+            </Link>
+
+          <li>
+            <Link to="/berita3" className="hover:underline"
+                      onClick={() => window.scrollTo(0, 0)}                         >
+                  3. 5 Tips untuk Menjadi Programmer yang Lebih Baik
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/berita4" className="hover:underline"
+                      onClick={() => window.scrollTo(0, 0)}                         >
+                  4. Game Developer asal Indonesia Jadi Finalis USA Game Award 2025
+            </Link>
+          </li> 
+
+          <li>
+            <Link to="/berita5" className="hover:underline"
+                      onClick={() => window.scrollTo(0, 0)}                         >
+                  5. Klarifikasi, Elaborasi, dan Editing: Teknik bagi Content Writer yang Menggunakan AI
+            </Link>
+          </li> 
+
+          </ul>
+        </div>    
+  
         {/* Kolom Konten */}
         <div className="flex-1">
           <h2 className="text-xl font-semibold mb-4">
