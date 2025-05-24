@@ -4,7 +4,14 @@ import { Link } from "react-router-dom";
 function App() {
   return (
     <div className="bg-gray-100 text-gray-800 p-6 rounded-lg max-w-4xl mx-auto mt-10">
-      <h1 className="text-3xl font-semibold text-center text-blue-600 mb-6">Klarifikasi, Elaborasi, dan Editing: Teknik bagi Content Writer yang Menggunakan AI</h1>
+
+      <img 
+          src="https://contentwriters.com/blog/wp-content/uploads/content-writer-750x500.jpg" 
+          alt="Game Developer Indonesia" 
+          className="w-full h-64 object-cover rounded-md mb-6"
+        />
+        
+    <h1 className="text-3xl font-semibold text-center text-blue-600 mb-6">Klarifikasi, Elaborasi, dan Editing: Teknik bagi Content Writer yang Menggunakan AI</h1>
 
       <p className="mb-4 text-lg leading-relaxed">
         Dalam era digital yang semakin berkembang, penggunaan AI dalam dunia penulisan konten semakin meluas. Namun, banyak content writer yang masih kebingungan mengenai bagaimana AI dapat dimanfaatkan secara maksimal. Klarifikasi menjadi langkah pertama yang sangat penting untuk memastikan bahwa teknologi ini dapat diadaptasi dengan baik dalam dunia penulisan. Teknologi AI membantu para penulis untuk menghasilkan teks yang lebih cepat dan efisien, namun tetap membutuhkan sentuhan kreatif manusia untuk memberikan kedalaman dan makna.
