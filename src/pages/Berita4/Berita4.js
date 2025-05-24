@@ -4,24 +4,7 @@ import Footer from '../../components/Section/Footer'; // Import your Footer comp
 
 function App() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-100 flex flex-col"> {/* Main flex container */}
-=======
-    <div className="bg-gray-100 text-gray-800 p-6 rounded-lg max-w-4xl mx-auto mt-10">
-      <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-6">
-        <img 
-          src=""https://www.baker.edu/wp-content/uploads/how-to-become-a-game-developer.jpg" 
-          alt="Game Developer Indonesia" 
-          className="w-full h-64 object-cover rounded-md mb-6"
-        />
-        <h1 className="text-3xl font-bold text-blue-700 mb-4">
-          Game Developer asal Indonesia Jadi Finalis USA Game Award 2025
-        </h1>
-        
-        <p className="text-lg leading-relaxed mb-4">
-          Sebuah prestasi membanggakan kembali ditorehkan oleh anak bangsa di kancah internasional. Sebuah studio game indie asal Bandung, Indonesia, bernama <strong>PixelPlay Studio</strong>, resmi diumumkan sebagai salah satu finalis dalam ajang bergengsi <em>USA Game Award 2025</em>. Penghargaan ini merupakan salah satu ajang paling prestisius di industri game global yang mempertemukan talenta-talenta terbaik dari berbagai belahan dunia.
-        </p>
->>>>>>> b9de4e2cc6238802e3650529a347a9e964e1a606
 
       {/* Content area with flex-grow */}
       <div className="flex-grow py-10 px-4" data-aos="fade-up">
