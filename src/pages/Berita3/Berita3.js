@@ -7,7 +7,7 @@ function App() {
     <div className="bg-gray-100 text-gray-800 p-6 rounded-lg max-w-4xl mx-auto mt-10">
       <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8">
         <img 
-          src="https://source.unsplash.com/featured/?programming,developer" 
+          src="https://dashboard.primakara.ac.id/uploads/full_stack_developer_adalah_28fc15e4c2.jpeg"
           alt="Programmer Illustration" 
           className="w-full h-64 object-cover rounded-md mb-6"
         />
