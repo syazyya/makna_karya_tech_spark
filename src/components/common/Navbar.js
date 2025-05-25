@@ -1,7 +1,7 @@
 import React, { useState, useEffect, forwardRef, useCallback } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { throttle } from 'lodash';
-import logo from '../../assets/Logo.png';
+import logo from '../../assets/logo2.jpeg';
 
 /**
  * Komponen NavLink yang bisa digunakan ulang untuk tampilan konsisten
