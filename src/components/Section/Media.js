@@ -72,7 +72,7 @@ export default function Media() {
     };
 
     return (
-        <section id="media" className="py-16 md:py-24 bg-white">
+        <section id="media" className="py-10 md:py-18 bg-white">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-16" data-aos="fade-up">
@@ -80,7 +80,7 @@ export default function Media() {
                         <span className="text-blue-600">Kegitan</span> Kami
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Dokumentasi kegiatan dan konten edukasi teknologi kami.
+                        Berikut beberapa dokumentasi kegiatan kami dalam menginspirasi generasi digital.
                     </p>
                 </div>
 
