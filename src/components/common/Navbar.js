@@ -202,7 +202,7 @@ const Navbar = forwardRef((props, ref) => {
       }`}
     >
       {/* Container utama navbar */}
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="max-w-8xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo dengan link ke home */}
         <Link
           to="/"

@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 
 export default function NewsPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-[#0c1434]">
+    <div className="relative bg-gradient-to-br from-blue-50 to-indigo-50">
       {/* Main content container with flex-grow */}
-      <div className="flex-grow py-10 px-4 text-gray-100">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+      <div className="flex-grow py-10 px-4 text-gray-800">
+        <div className="max-w-8xl mx-auto grid md:grid-cols-3 gap-8">
           {/* Featured News */}
           <div className="md:col-span-2" data-aos="fade-up">
             <h1 className="text-3xl font-bold mb-6 pt-10">Featured News</h1>
@@ -19,23 +19,23 @@ export default function NewsPage() {
             <h2 className="text-2xl font-semibold mb-4">
               Makin Produktif, Ini Cara Kolaborasi Programmer dengan AI
             </h2>
-            <p className="text-gray-300 mb-4 leading-relaxed">
+            <p className="text-gray-800 mb-4 leading-relaxed">
               Indonesia bersiap meluncurkan AI Garuda, sebuah kecerdasan buatan yang diklaim memiliki kemampuan setara dengan ChatGPT. Proyek ini merupakan hasil kerja sama antara pemerintah, lembaga riset nasional, serta beberapa universitas teknologi terkemuka di dalam negeri.
             </p>
-            <p className="text-gray-300 mb-4 leading-relaxed">
+            <p className="text-gray-800 mb-4 leading-relaxed">
               Peluncuran ini menandai babak baru dalam transformasi digital nasional, serta membuka peluang kolaborasi yang lebih luas antara manusia dan mesin.
             </p>
-            <p className="text-gray-300 mb-4 leading-relaxed">
+            <p className="text-gray-800 mb-4 leading-relaxed">
               Dengan hadirnya AI Garuda, diharapkan sektor teknologi, pendidikan, dan industri kreatif dapat berkembang pesat dan menghasilkan solusi inovatif lokal.
             </p>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-800 leading-relaxed">
               Kolaborasi ini menunjukkan kesiapan Indonesia dalam menyambut era industri 5.0 yang berpusat pada sinergi antara manusia dan teknologi pintar.
             </p>
           </div>
 
           {/* Sidebar Recent News */}
-          <div className="bg-[#0e1b4d] p-6 rounded-lg space-y-4 h-fit sticky top-24" data-aos="fade-up">
-            <h2 className="text-xl font-bold text-white mb-4 pt-8">Recent News</h2>
+          <div className="bg-white p-6 rounded-lg space-y-4 h-fit sticky top-24" data-aos="fade-up">
+            <h2 className="text-xl font-bold text-gray mb-4 pt-8">Recent News</h2>
 
             {/* Card 1 */}
             <div className="bg-white rounded-md shadow hover:shadow-lg overflow-hidden transition">
