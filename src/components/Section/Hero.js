@@ -78,7 +78,7 @@ export default function Hero({ navHeight = 0 }) {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDU5LDEzMCwyNDYsMC4xKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm4pIi8+PC9zdmc+')]"></div>
       </div>
 
-      <div className="relative z-10 max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-9xl mx-auto px-4 sm:px-6 lg:px-6">
         {/* Hero Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center pt-12 md:pt-20">
           {/* Content */}
@@ -159,8 +159,8 @@ export default function Hero({ navHeight = 0 }) {
         </div>
 
         {/* TechSpark Program Section - Two Column Layout */}
-        <div className="mt-15 relative py-10 px-4 sm:px-6 lg:px-8" data-aos="fade-up">
-          <div className="max-w-7xl mx-auto">
+        <div className="mt-15 relative py-10 px-4 sm:px-6 lg:px-6" data-aos="fade-up">
+          <div className="max-w-9xl mx-auto">
             <div className="flex flex-col lg:flex-row gap-10 items-center">
               {/* Left Column - Illustration */}
               <div className="lg:w-1/2 flex justify-center" data-aos="fade-right">
@@ -172,7 +172,7 @@ export default function Hero({ navHeight = 0 }) {
               </div>
 
               {/* Right Column - Content */}
-              <div className="lg:w-1/2 rounded-xl p-8 sm:p-12 bg-white shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-transparent" data-aos="fade-left">
+              <div className="lg:w-1/2 rounded-xl sm:p-12 md:p-12 lg:p-12 bg-white shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-transparent" data-aos="fade-left">
                 <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                   TechSpark Program
                 </h3>
@@ -280,7 +280,7 @@ export default function Hero({ navHeight = 0 }) {
             </p>
 
             {/* Grid Logo - 2x3 */}
-            <div className="grid grid-cols-2 gap-4 sm:gap-6">
+            {/* <div className="grid grid-cols-2 gap-4 sm:gap-6">
               {[
                 { logo: '/prelo.png', alt: 'Prelo', class: 'h-10' },
                 { logo: '/goers.png', alt: 'Goers', class: 'h-8 mt-1' },
@@ -301,7 +301,7 @@ export default function Hero({ navHeight = 0 }) {
                   />
                 </div>
               ))}
-            </div>
+            </div> */}
 
             <div className="mt-8 pt-6 border-t border-gray-200">
               <a

@@ -27,8 +27,8 @@ export default function JoinUsForm({ navHeight = 0 }) {
               <h1 className="text-2xl md:text-3xl font-bold text-white">
                 Bergabung Bersama Kami
               </h1>
-              <p className="text-blue-100 mt-2">
-                Siap berkembang di dunia teknologi? Daftar sekarang!
+              <p className="text-blue-100 mt-2"> 
+                <i>Siap berkembang di dunia teknologi? Daftar sekarang dan jadi bagian dari gerakan digital!</i>
               </p>
             </div>
 

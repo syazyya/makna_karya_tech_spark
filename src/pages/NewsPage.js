@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 
 export default function NewsPage() {
   return (
-    <div className="relative bg-gradient-to-br from-blue-50 to-indigo-50">
+    <div className="relative bg-gradient-to-br from-blue-50 to-indigo-50 ">
       {/* Main content container with flex-grow */}
-      <div className="flex-grow py-10 px-4 text-gray-800">
-        <div className="max-w-8xl mx-auto grid md:grid-cols-3 gap-8">
+      <div className="flex-grow py-10 text-gray-800">
+        <div className="max-w-9xl mx-auto sm:px-6 lg:px-6 grid md:grid-cols-3 gap-8">
           {/* Featured News */}
           <div className="md:col-span-2" data-aos="fade-up">
             <h1 className="text-3xl font-bold mb-6 pt-10">Featured News</h1>

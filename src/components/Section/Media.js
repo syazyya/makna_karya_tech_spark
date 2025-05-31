@@ -77,10 +77,10 @@ export default function Media() {
                 {/* Header */}
                 <div className="text-center mb-16" data-aos="fade-up">
                     <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                        <span className="text-blue-600">TechSpark</span> Media
+                        <span className="text-blue-600">Kegitan</span> Kami
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Dokumentasi kegiatan dan konten edukasi teknologi kami
+                        Dokumentasi kegiatan dan konten edukasi teknologi kami.
                     </p>
                 </div>
 
