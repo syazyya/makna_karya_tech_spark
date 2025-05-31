@@ -133,7 +133,7 @@ const Navbar = forwardRef((props, ref) => {
       // Hanya deteksi section jika di home page
       if (location.pathname !== '/') return;
 
-      const sections = ['home', 'media', 'join'];
+      const sections = ['home', 'media  ', 'join'];
       let current = '';
 
       // Cari section yang sedang visible di viewport

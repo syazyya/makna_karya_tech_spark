@@ -57,7 +57,7 @@ export default function About() {
 
       {/* Main content */}
       <main className="flex-grow relative z-10">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20">
+        <div className="max-w-9xl mx-auto px-8 lg:px-18 py-20">
           {/* Header */}
           <div className="grid md:grid-cols-2 items-center gap-12 mb-16" data-aos="fade-up">
             <div>

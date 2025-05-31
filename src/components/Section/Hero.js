@@ -158,6 +158,7 @@ export default function Hero({ navHeight = 0 }) {
           ))}
         </div>
 
+
         {/* TechSpark Program Section - Two Column Layout */}
         <div className="mt-15 relative py-10 px-4 sm:px-6 lg:px-6" data-aos="fade-up">
           <div className="max-w-9xl mx-auto">
@@ -172,7 +173,7 @@ export default function Hero({ navHeight = 0 }) {
               </div>
 
               {/* Right Column - Content */}
-              <div className="lg:w-1/2 rounded-xl sm:p-12 md:p-12 lg:p-12 bg-white shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-transparent" data-aos="fade-left">
+              <div className="lg:w-1/2 rounded-xl p-6 sm:p-12 bg-white shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-transparent" data-aos="fade-left">
                 <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                   TechSpark Program
                 </h3>
@@ -222,6 +223,7 @@ export default function Hero({ navHeight = 0 }) {
             </div>
           </div>
         </div>
+
 
         {/* Hiring Network & Partners Section */}
         <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] rounded-xl shadow-lg overflow-hidden bg-white" data-aos="fade-up">
@@ -302,18 +304,6 @@ export default function Hero({ navHeight = 0 }) {
                 </div>
               ))}
             </div> */}
-
-            <div className="mt-8 pt-6 border-t border-gray-200">
-              <a
-                href="#all-partners"
-                className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center text-sm"
-              >
-                Jelajahi semua perusahaan partner
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-            </div>
           </div>
         </div>
         <br />
