@@ -4,17 +4,17 @@ import Footer from '../../components/Section/Footer'; // Make sure to import you
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col"> {/* Main container with flex column layout */}
+    <div className="min-h-screen bg-gray-100 flex justify-center flex-col"> {/* Main container with flex column layout */}
 
       {/* Content container with flex-grow to push footer down */}
-      <div className="flex-grow flex justify-center items-start px-4 py-10" data-aos="fade-up">
-        <div className="bg-white text-gray-800 p-6 rounded-lg max-w-4xl w-full shadow-lg">
+      <div className="flex-grow flex justify-center px-4 py-10" data-aos="fade-up">
+        <div className="bg-white text-gray-800 p-6 rounded-lg max-w-4xl w-full shadow-lg pt-12">
 
 
           <img
             src="https://dashboard.primakara.ac.id/uploads/full_stack_developer_adalah_28fc15e4c2.jpeg"
             alt="Ilustrasi pengembangan perangkat lunak"
-            className="w-full h-auto rounded-md mb-8"
+            className="w-full h-64 object-cover rounded-md mb-6"
           />
           <h1 className="text-3xl font-bold text-gray-800 mb-6">
             Pertimbangan Jadi Ahli Front End, Back End, atau DevOps?

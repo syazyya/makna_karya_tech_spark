@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-
+import Footer from '../../components/Section/Footer'; // Make sure to import y
 
 function App() {
   return (
-    <div className="bg-gray-100 text-gray-800 p-6 rounded-lg max-w-4xl mx-auto mt-10">
-      <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8 pt-12" data-aos="fade-up">
+    <div className="min-h-screen bg-gray-100 flex flex-col">
+      <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8 pt-24" data-aos="fade-up">
         <img 
           src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXduCXuk8FsWhPejbP6fyDndjFp1d5Is5iCBEeWID-QJiNZmwVXjFObqntTLYIZC66ne6sTnxYcMnhl95gTFU0PTExa4vy2_q3Qwrk7AcxfPAV3LVvY7GIvxO4miuowavruS8PBeYVASBEIcCw5CUd36jnJrIWUOxOu6eK2C3HjoXCh_SVwWYx8?key=pfiTtLfCK9oc95qD-hhoZg" 
           alt="Programmer Illustration" 
@@ -43,6 +43,9 @@ function App() {
           
 
       </div>
+      <br/>
+      {/* Footer will now stick to the bottom */}
+            <Footer />
     </div>
   );
 }

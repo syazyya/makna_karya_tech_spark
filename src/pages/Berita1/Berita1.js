@@ -7,14 +7,14 @@ function App() {
     <div className="min-h-screen bg-gray-100 flex flex-col"> {/* Changed to flex-col */}
       {/* Main content container with flex-grow */}
       <div className="flex-grow flex justify-center px-4 py-10">
-        <div className="max-w-3xl bg-white shadow-lg rounded-lg p-6 pt-12 w-full" data-aos="fade-up">
+        <div className="bg-white text-gray-800 p-6 rounded-lg max-w-4xl w-full shadow-lg pt-12" data-aos="fade-up">
 
 
           <div className="flex justify-center">
             <img
               src="https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Ilustrasi AI Garuda"
-              className="w-1/2 h-auto rounded-md mb-6"
+              className="w-full h-64 object-cover rounded-md mb-6"
             />
           </div>
           <h1 className="text-3xl font-bold text-gray-800 mb-4">
