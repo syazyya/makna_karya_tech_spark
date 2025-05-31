@@ -3,6 +3,7 @@ import aboutImage from '../assets/aboutus.svg';
 import FarisPhoto from '../assets/Faris.jpg';
 import RestuPhoto from '../assets/Restu.jpg';
 import Footer from '../components/Section/Footer';
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

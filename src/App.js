@@ -5,7 +5,9 @@ import NewsPage from './pages/NewsPage';
 import About from './pages/About';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import ScrollToTop from './components/common/ScrollToTop';
 import MainPage from './pages/MainPage';  // Ganti path import
+
 
 import Berita1 from "./pages/Berita1/Berita1";
 import Berita2 from "./pages/Berita2/Berita2";
@@ -35,6 +37,7 @@ function App() {
   return (
     <>
       <Navbar ref={navbarRef} />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<MainPage navHeight={navHeight} />} />
         <Route path="/about" element={<About />} />
