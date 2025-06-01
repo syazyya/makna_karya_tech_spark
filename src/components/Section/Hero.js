@@ -73,7 +73,7 @@ export default function Hero({ navHeight = 0 }) {
       className="relative bg-gradient-to-br from-blue-50 to-indigo-50"
       style={{ paddingTop: navHeight ? `${navHeight}px` : '10px' }}
     >
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-9xl mx-auto px-4 sm:px-6 lg:px-6 mr-4">
         {/* Hero Section - Flex Layout */}
         <div className="flex flex-col lg:flex-row items-center pt-12 md:pt-20 gap-12">
           {/* Content */}
@@ -270,8 +270,10 @@ export default function Hero({ navHeight = 0 }) {
               Techlab berkolaborasi dengan rekan-rekan industri teknologi yang aktif memecahkan solusi dari masalah yang ada saat ini. Alumni Techlab berkesempatan untuk bergabung bersama hiring partner kami.
             </p>
           </div>
+          
         </div>
       </div>
+      <br/>
     </section>
   );
 }

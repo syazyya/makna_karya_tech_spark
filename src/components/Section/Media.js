@@ -72,7 +72,7 @@ export default function Media() {
     };
 
     return (
-        <section id="media" className="py-10 md:py-18 bg-white">
+        <section id="media" className="py-10 md:py-18 bg-white mr-4">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-16" data-aos="fade-up">
