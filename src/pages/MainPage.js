@@ -8,7 +8,7 @@ export default function MainPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section id="home">
+      <section id="home" >
         <Hero />
       </section>
 

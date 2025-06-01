@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import joinus from '../../assets/join.svg';
+import { join } from 'lodash';
 
 const FormGabung = ({ navHeight = 0 }) => {
   const [formData, setFormData] = useState({
@@ -139,6 +141,12 @@ const FormGabung = ({ navHeight = 0 }) => {
               <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-indigo-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
               <div className="relative" data-aos="fade-up">
                 {/* Tambahkan ilustrasi di sini jika ada */}
+                <img
+                  src={joinus}
+                  alt="Workshop Illustration"
+                  loading="lazy"
+                  className="relative w-full max-w-lg mx-auto drop-shadow-2xl"
+                />
               </div>
             </div>
           </div>

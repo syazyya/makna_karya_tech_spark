@@ -77,10 +77,10 @@ export default function Media() {
                 {/* Header */}
                 <div className="text-center mb-16" data-aos="fade-up">
                     <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                        <span className="text-blue-600">Kegitan</span> Kami
+                        <span className="text-blue-600">TechSpark</span> Media
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Berikut beberapa dokumentasi kegiatan kami dalam menginspirasi generasi digital.
+                        Dokumentasi kegiatan TechSpark yang mencakup berbagai momen penting, mulai dari diskusi tim, presentasi proyek, hingga hands-on workshop. Setiap foto dan video merekam semangat kolaborasi dan inovasi yang kami bangun bersama.   
                     </p>
                 </div>
 

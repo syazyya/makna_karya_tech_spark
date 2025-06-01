@@ -70,17 +70,14 @@ export default function Hero({ navHeight = 0 }) {
   return (
     <section
       id="home"
-      className="relative bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden"
+      className="relative bg-gradient-to-br from-blue-50 to-indigo-50"
       style={{ paddingTop: navHeight ? `${navHeight}px` : '10px' }}
     >
-      {/* Background pattern */}
-    
-
-      <div className="relative z-10 max-w-9xl mx-auto px-4 sm:px-6 lg:px-6">
-        {/* Hero Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center pt-12 md:pt-20">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Hero Section - Flex Layout */}
+        <div className="flex flex-col lg:flex-row items-center pt-12 md:pt-20 gap-12">
           {/* Content */}
-          <div className="space-y-6" data-aos="fade-up">
+          <div className="flex-1 space-y-6" data-aos="fade-up">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl pt-3 font-bold text-gray-900 leading-tight">
               <span className="block">Mulai</span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
@@ -102,11 +99,11 @@ export default function Hero({ navHeight = 0 }) {
               program edukasi programming berkualitas.
             </p>
 
-            <div className="flex flex-wrap gap-4 pt-4">
+            <div className="flex flex-wrap gap-4">
               <a
                 href="#join"
                 className="px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
+              > 
                 Join Us
               </a>
               <a
@@ -119,11 +116,8 @@ export default function Hero({ navHeight = 0 }) {
           </div>
 
           {/* Image */}
-          <div className="relative" data-aos="fade-up" data-aos-delay="100">
-            <div className="absolute -top-10 -left-10 w-32 h-32 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-            <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-            <div className="absolute top-0 right-0 w-32 h-32 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
-
+          <div className="flex-1 relative" data-aos="fade-up" data-aos-delay="100">
+            
             <img
               src={workshop}
               alt="Workshop Illustration"
@@ -133,14 +127,16 @@ export default function Hero({ navHeight = 0 }) {
           </div>
         </div>
 
-        {/* Why TechSpark Section */}
-        <div className="mt-20 grid md:grid-cols-2 gap-8 items-start" data-aos="fade-up">
-          <SectionHeader
-            subtitle="All New Institute"
-            title="Why TechSpark"
-          />
-
-          <div className="text-center md:text-left bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-transparent">
+        {/* Why TechSpark Section - Flex Layout */}
+        <div className="mt-20 flex flex-col md:flex-row gap-8 items-start" data-aos="fade-up">
+          <div className="flex-1">
+            <SectionHeader
+              subtitle="All New Institute"
+              title="Why TechSpark"
+            />
+          </div>
+          
+          <div className="flex-1 text-center md:text-left bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-transparent">
             <p className="text-gray-700 leading-relaxed">
               Menjadi pemrogram yang andal, bukan hanya membutuhkan keberuntungan dan waktu singkat/instan.
               Melainkan membutuhkan attitude yang mengedepankan kerja keras dan terus mau belajar.
@@ -149,84 +145,80 @@ export default function Hero({ navHeight = 0 }) {
           </div>
         </div>
 
-        {/* Features Grid */}
-        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Features Grid - Still using grid for better alignment */}
+        <div className="mt-16 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
             <FeatureCard key={index} {...feature} />
           ))}
         </div>
 
+        {/* TechSpark Program Section - Flex Layout */}
+        <div className="mt-16 relative py-10" data-aos="fade-up">
+          <div className="flex flex-col lg:flex-row gap-10 items-center">
+            {/* Left Column - Illustration */}
+            <div className="w-full lg:w-1/2 flex justify-center mb-8 lg:mb-0" data-aos="fade-right">
+              <img
+                src={program}
+                alt="Ilustrasi Program TechSpark"
+                className="w-full max-w-xs sm:max-w-md lg:max-w-none"
+              />
+            </div>
 
-        {/* TechSpark Program Section - Two Column Layout */}
-        <div className="mt-15 relative py-10 px-4 sm:px-6 lg:px-6" data-aos="fade-up">
-          <div className="max-w-9xl mx-auto">
-            <div className="flex flex-col lg:flex-row gap-10 items-center">
-              {/* Left Column - Illustration */}
-              <div className="lg:w-1/2 flex justify-center" data-aos="fade-right">
-                <img
-                  src={program}
-                  alt="Ilustrasi Program TechSpark"
-                  className="w-full max-w-md lg:max-w-none"
-                />
-              </div>
+            {/* Right Column - Content */}
+            <div className="w-full lg:w-1/2 rounded-xl p-6 sm:p-12 bg-white shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-transparent" data-aos="fade-left">
+              <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+                TechSpark Program
+              </h3>
 
-              {/* Right Column - Content */}
-              <div className="lg:w-1/2 rounded-xl p-6 sm:p-12 bg-white shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-transparent" data-aos="fade-left">
-                <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                  TechSpark Program
-                </h3>
+              <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                Memandirikan diri dan membangun attitude untuk terus belajar. Pendampingan dan ramuan
+                kurikulum yang tepat dari TechSpark, dapat membuat proses belajar efektif dan efisien.
+              </p>
 
-                <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                  Memandirikan diri dan membangun attitude untuk terus belajar. Pendampingan dan ramuan
-                  kurikulum yang tepat dari TechSpark, dapat membuat proses belajar efektif dan efisien.
-                </p>
-
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-start">
-                    <svg className="flex-shrink-0 h-6 w-6 text-green-500 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">Kurikulum berbasis industri terkini</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="flex-shrink-0 h-6 w-6 text-green-500 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">Pembelajaran personalisasi sesuai kebutuhan</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="flex-shrink-0 h-6 w-6 text-green-500 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">Mentor berpengalaman di bidangnya</span>
-                  </li>
-                </ul>
-
-                <a
-                  href="#program"
-                  className="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
-                >
-                  Selengkapnya
-                  <svg
-                    className="ml-2 w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start">
+                  <svg className="flex-shrink-0 h-6 w-6 text-green-500 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                </a>
-              </div>
+                  <span className="text-gray-700">Kurikulum berbasis industri terkini</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="flex-shrink-0 h-6 w-6 text-green-500 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-gray-700">Pembelajaran personalisasi sesuai kebutuhan</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="flex-shrink-0 h-6 w-6 text-green-500 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-gray-700">Mentor berpengalaman di bidangnya</span>
+                </li>
+              </ul>
+
+              <a
+                href="#program"
+                className="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+              >
+                Selengkapnya
+                <svg
+                  className="ml-2 w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
 
-
-        {/* Hiring Network & Partners Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] rounded-xl shadow-lg overflow-hidden bg-white" data-aos="fade-up">
+        {/* Hiring Network & Partners Section - Flex Layout */}
+        <div className="flex flex-col lg:flex-row rounded-xl shadow-lg overflow-hidden bg-white mt-16" data-aos="fade-up">
           {/* Kolom Kiri (Hiring Network - 60%) */}
-          <div className="relative p-10 sm:p-14 bg-gradient-to-br from-gray-900 to-blue-900 text-white">
+          <div className="w-full lg:w-[60%] relative p-6 sm:p-10 lg:p-14 bg-gradient-to-br from-gray-900 to-blue-900 text-white">
             {/* Tech Pattern Background */}
             <div
               className="absolute inset-0 opacity-20"
@@ -269,52 +261,16 @@ export default function Hero({ navHeight = 0 }) {
                 </a>
               </div>
             </div>
-
           </div>
 
           {/* Kolom Kanan (Partner - 40%) */}
-          <div className="bg-gray-50 p-10 sm:p-14 border-l border-gray-200">
+          <div className="w-full lg:w-[40%] bg-gray-50 p-6 sm:p-10 lg:p-14 border-t lg:border-t-0 lg:border-l border-gray-200">
             <h4 className="text-2xl font-semibold text-gray-900 mb-6">Collaborating Network</h4>
             <p className="text-gray-700 mb-6">
               Techlab berkolaborasi dengan rekan-rekan industri teknologi yang aktif memecahkan solusi dari masalah yang ada saat ini. Alumni Techlab berkesempatan untuk bergabung bersama hiring partner kami.
             </p>
-
-            {/* Grid Logo - 2x3 */}
-            {/* <div className="grid grid-cols-2 gap-4 sm:gap-6">
-              {[
-                { logo: '/prelo.png', alt: 'Prelo', class: 'h-10' },
-                { logo: '/goers.png', alt: 'Goers', class: 'h-8 mt-1' },
-                { logo: '/efishery.png', alt: 'eFishery', class: 'h-10' },
-                { logo: '/geek-hunter.png', alt: 'Geek Hunter', class: 'h-8' },
-                { logo: '/startup-bandung.png', alt: 'Startup Bandung', class: 'h-6' },
-                { logo: '/git.png', alt: 'Git', class: 'h-10' }
-              ].map((item, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow flex items-center justify-center"
-                >
-                  <img
-                    src={item.logo}
-                    alt={item.alt}
-                    className={`${item.class} object-contain max-w-full`}
-                    loading="lazy"
-                  />
-                </div>
-              ))}
-            </div> */}
           </div>
         </div>
-        <br />
-      </div>
-
-      {/* Wave Bottom */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden">
-        <svg className="relative block w-[200%] h-24 sm:h-32" viewBox="0 0 1440 150" preserveAspectRatio="none">
-          <path
-            className="fill-current text-blue-50"
-            d="M0,96L80,117.3C160,139,320,181,480,181.3C640,181,800,139,960,128C1120,117,1280,139,1360,149.3L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-          ></path>
-        </svg>
       </div>
     </section>
   );
