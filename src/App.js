@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/common/Navbar';
 import NewsPage from './pages/NewsPage';
 import About from './pages/About';
+import Media from './pages/Media';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ScrollToTop from './components/common/ScrollToTop';
@@ -41,6 +42,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage navHeight={navHeight} />} />
         <Route path="/about" element={<About />} />
+        <Route path="/media" element={<Media />} />
         <Route path="/news" element={<NewsPage />} />
 
         <Route path="/berita1" element={<Berita1 />} />

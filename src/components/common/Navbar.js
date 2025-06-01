@@ -59,7 +59,7 @@ const Navbar = forwardRef((props, ref) => {
   const navLinks = [
     { label: 'Home', to: '/', type: 'route' },
     { label: 'About', to: '/about', type: 'route' },
-    { label: 'Media', to: '#media', type: 'scroll' },
+    { label: 'Media', to: '/media', type: 'route' },
     { label: 'News', to: '/news', type: 'route' },
     { label: 'Join Us', to: '#join', highlight: true, type: 'scroll' },
   ];

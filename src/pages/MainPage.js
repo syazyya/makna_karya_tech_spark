@@ -1,6 +1,5 @@
 import React from 'react';
 import Hero from '../components/Section/Hero';
-import Media from '../components/Section/Media';
 import JoinUsForm from '../components/Section/JoinUsForm';
 import Footer from '../components/Section/Footer';
 
@@ -10,10 +9,6 @@ export default function MainPage() {
       {/* Hero Section */}
       <section id="home" >
         <Hero />
-      </section>
-
-      <section id="media">
-        <Media />
       </section>
 
       <section id="join">
