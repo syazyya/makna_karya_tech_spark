@@ -6,7 +6,7 @@ export default function NewsPage() {
   return (
     <div className="relative bg-gradient-to-br from-blue-50 to-indigo-50 min-h-screen flex flex-col">
       {/* Konten Utama */}
-      <div className="flex-grow py-10 text-gray-800">
+      <div className="flex-grow py-10 text-gray-800 mr-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-8">
           
           {/* Featured News */}

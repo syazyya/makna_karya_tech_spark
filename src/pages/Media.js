@@ -76,9 +76,9 @@ export default function Media() {
     return (
         <div className="flex flex-col min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
             {/* Main content */}
-            <main className="flex-grow relative z-10">
+            <main className="flex-grow relative z-10 mr-4">
                 <section id="media" className="py-10 md:py-16">
-                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-8">
                         {/* Header */}
                         <div className="text-center mb-12" data-aos="fade-up">
                             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
