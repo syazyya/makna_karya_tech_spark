@@ -13,26 +13,80 @@ export default function NewsPage() {
           <div className="flex-1 md:pr-6" data-aos="fade-up">
             <h1 className="text-2xl md:text-3xl font-bold mb-6 pt-10">Featured News</h1>
             <img
-              src="https://plus.unsplash.com/premium_photo-1676637656166-cb7b3a43b81a?q=80&w=1632&auto=format&fit=crop"
+              src="https://images.unsplash.com/photo-1563394867331-e687a36112fd?q=80&w=1476&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Featured"
               className="w-full rounded-lg shadow-md mb-6 object-cover"
             />
             <h2 className="text-lg md:text-2xl font-semibold mb-4">
-              Makin Produktif, Ini Cara Kolaborasi Programmer dengan AI
+                TechSpark Maknakarya Selenggarakan Pelatihan Fullstack Development Batch Pertama
             </h2>
             <hr className="border-gray-400 mb-6" />
+            
             <p className="text-gray-800 mb-4 leading-relaxed">
-               Indonesia bersiap meluncurkan AI Garuda, sebuah kecerdasan buatan yang diklaim memiliki kemampuan setara dengan ChatGPT. Proyek ini merupakan hasil kerja sama antara pemerintah, lembaga riset nasional, serta beberapa universitas teknologi terkemuka di dalam negeri.
-            </p>
+              TechSpark MaknaKartya - Pada awal Maret lalu, lembaga pelatihan TechSpark Maknakarya 
+              menyelenggarakan pelatihan Fullstack Development batch pertama. 
+              Pelatihan ini diikuti empat peserta dari berbagai latar belakang. 
+              Durasi pelatihan berlangsung selama tiga hingga empat bulan.
+            </p><br/>
+            
             <p className="text-gray-800 mb-4 leading-relaxed">
-              Peluncuran ini menandai babak baru dalam transformasi digital nasional, serta membuka peluang kolaborasi yang lebih luas antara manusia dan mesin.
-            </p>
+              Restu Arif, instruktur sekaligus pengelola lembaga ini, menjelaskan bahwa 
+              bidang ini sebenarnya menjanjikan. "Peluang kerja di Fullstack Development terbuka luas. 
+              Banyak sekarang perusahaan yang butuh," ujar pria bergelar sarjana Teknik Informatika ini.
+            </p><br/>
+            
             <p className="text-gray-800 mb-4 leading-relaxed">
-              Dengan hadirnya AI Garuda, diharapkan sektor teknologi, pendidikan, dan industri kreatif dapat berkembang pesat dan menghasilkan solusi inovatif lokal.
-            </p>
-            <p className="text-gray-800 leading-relaxed">
-              Kolaborasi ini menunjukkan kesiapan Indonesia dalam menyambut era industri 5.0 yang berpusat pada sinergi antara manusia dan teknologi pintar.
-            </p>
+              Sementara itu, menurut laporan Kementerian Ketenagakerjaan, permintaan 
+              terhadap tenaga ahli IT diperkirakan akan meningkat hingga tahun 2025. 
+              Keahlian di bidang Fullstack Development menjadi salah satunya. Fullstack 
+              Development merancang aplikasi berbasis browser. Bidang ini terbagi lagi 
+              menjadi tiga bidang spesialisasi. Yaitu, Frontend, Backend, 
+              dan DevOps. 
+            </p><br/>
+
+            <p class="font-bold">AI Membantu Belajar</p><br/>
+
+            <p>
+              Terkait proses pembelajaran, alumni Institut Teknologi Bandung ini 
+              tak menampik AI membantu proses coding. "AI mempermudah belajar, membantu 
+              menyelesaikan proyek. (Proyek) yang sebelumnya butuh waktu tiga bulan menjadi 
+              satu minggu," katanya.
+            </p><br/>
+
+            <p>
+              Meski canggih, Restu mengingatkan agar tak lantas menggunakannya 
+              sepenuhnya. Sebabnya, teknologi ini sebenarnya hanya alat bantu. "AI sebenarnya 
+              alat bantu. Jangan sampai pakai AI, tapi logika coding nggak mengerti. 
+              Kita nggak mau melatih orang yang cuma jago pakai AI, tapi nggak solutif," ujarnya.  
+            </p><br/>
+
+            <p>
+              Hal senada pun diungkapkan Rahadian, salah seorang peserta pelatihan. "Pakai AI 
+              membantu sekali buat belajar konsep-konsep dasarnya. Jadinya lebih cepat 
+              belajarnya," ujarnya.
+            </p><br/>
+
+            <p class="font-bold">Testimoni Peserta</p><br/>
+
+            <p>
+              Rahadian mengungkapkan pelatihan ini membantunya memahami seluk beluk bidang 
+              Fullstack Development. Terlebih, sebelumnya, ia masih awam. Ia pun mengungkapkan 
+              bahwa materi yang disampaikan mudah diikuti. Karenanya, membantu proses belajar. 
+              "Penyampaian materinya mudah dipahami buat yang baru belajar," ujarnya. 
+              </p><br/> 
+
+            <p>
+              Berbekal pelatihan tersebut dan pengalaman sebagai content writer sejak tahun 2014, 
+              pria bergelar sarjana Hubungan Internasional ini berencana berwirausaha di 
+              bidang tersebut."Saya ke depannya rencananya bikin web. Isinya konten-konten kreatif," 
+              ujar pria berkacamata ini.
+              </p><br/>
+
+            <p>
+              Namun, tak tertutup kemungkinan juga, akan bekerja sebagai staf IT di perusahaan. 
+              "Kalau ada kesempatan ke situ, saya ambil," ujarnya.***
+            </p><br/>
+
           </div>
 
           {/* Sidebar Recent News */}
