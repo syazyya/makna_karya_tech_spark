@@ -75,7 +75,7 @@ export default function Hero({ navHeight = 0 }) {
     >
       <div className="relative z-10 max-w-9xl mx-auto px-4 sm:px-6 lg:px-6 mr-4">
         {/* Hero Section - Flex Layout */}
-        <div className="flex flex-col lg:flex-row items-center pt-12 md:pt-20 gap-12">
+        <div className="flex flex-col-reverse lg:flex-row items-center pt-12 md:pt-20 gap-12">
           {/* Content */}
           <div className="flex-1 space-y-6" data-aos="fade-up">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl pt-3 font-bold text-gray-900 leading-tight">
@@ -107,7 +107,7 @@ export default function Hero({ navHeight = 0 }) {
                 Join Us
               </a>
               <a
-                href="#media"
+                href="#learn"
                 className="px-8 py-3 bg-white text-gray-700 font-medium rounded-lg border border-gray-200 hover:border-gray-300 shadow-sm hover:shadow-md transition-all duration-300"
               >
                 Learn More
@@ -116,7 +116,7 @@ export default function Hero({ navHeight = 0 }) {
           </div>
 
           {/* Image */}
-          <div className="flex-1 relative" data-aos="fade-up" data-aos-delay="100">
+          <div className="flex-1 relative mt-4" data-aos="fade-up" data-aos-delay="100">
             
             <img
               src={workshop}
@@ -128,11 +128,12 @@ export default function Hero({ navHeight = 0 }) {
         </div>
 
         {/* Why TechSpark Section - Flex Layout */}
-        <div className="mt-20 flex flex-col md:flex-row gap-8 items-start" data-aos="fade-up">
-          <div className="flex-1">
+        <div className="mt-20 flex flex-col md:flex-row gap-8 md:items-start items-center" data-aos="fade-up">
+          <div className="flex-1 justify-center w-full md:w-auto">
             <SectionHeader
               subtitle="All New Institute"
               title="Why TechSpark"
+              align="center md:left"
             />
           </div>
           
@@ -153,7 +154,7 @@ export default function Hero({ navHeight = 0 }) {
         </div>
 
         {/* TechSpark Program Section - Flex Layout */}
-        <div className="mt-16 relative py-10" data-aos="fade-up">
+        <div id="learn" className="mt-16 relative py-10" data-aos="fade-up">
           <div className="flex flex-col lg:flex-row gap-10 items-center">
             {/* Left Column - Illustration */}
             <div className="w-full lg:w-1/2 flex justify-center mb-8 lg:mb-0" data-aos="fade-right">
@@ -249,7 +250,7 @@ export default function Hero({ navHeight = 0 }) {
                 </span>
               </p>
 
-              <div className="flex flex-wrap gap-4 mt-auto">
+              {/* <div className="flex flex-wrap gap-4 mt-auto">
                 <a
                   href="#hiring"
                   className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors font-medium flex items-center"
@@ -259,7 +260,7 @@ export default function Hero({ navHeight = 0 }) {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
 

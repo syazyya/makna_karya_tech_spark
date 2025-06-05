@@ -52,6 +52,7 @@ const Navbar = forwardRef((props, ref) => {
   const [isScrolled, setIsScrolled] = useState(false); // Untuk efek scroll navbar
   const [menuOpen, setMenuOpen] = useState(false); // Toggle menu mobile
   const [activeSection, setActiveSection] = useState(''); // Section yang aktif
+  const [showJoinModal, setShowJoinModal] = useState(false);
   const location = useLocation(); // Lokasi saat ini
   const navigate = useNavigate(); // Fungsi navigasi
 
@@ -172,7 +173,11 @@ const Navbar = forwardRef((props, ref) => {
 
     // Handler ketika link diklik
     const handleClick = (e) => {
-      if (link.type === 'scroll') {
+      if (link.label === 'Join Us') {
+        e.preventDefault();
+        setShowJoinModal(true);
+        setMenuOpen(false);
+      } else if (link.type === 'scroll') {
         e.preventDefault();
         handleScrollClick(link.to.replace('#', ''));
       } else if (link.to === '/') {
@@ -194,62 +199,163 @@ const Navbar = forwardRef((props, ref) => {
   };
 
   return (
-    <header
-      ref={ref}
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        // Efek ketika di-scroll
-        isScrolled ? 'bg-white shadow' : 'bg-white/80 backdrop-blur-md'
-      }`}
-    >
-      {/* Container utama navbar */}
-      <div className="max-w-9xl mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Logo dengan link ke home */}
-        <Link
-          to="/"
-          onClick={handleLogoClick}
-          className="flex items-center gap-2 hover:opacity-80 transition"
-          aria-label="Home"
-          state={{ shouldScrollToTop: true }}
-        >
-          <img src={logo} alt="Logo" className="h-8 w-8 object-contain" />
-          <span className="text-xl font-bold text-blue-600">TechSpark</span>
-        </Link>
-
-        {/* Navigasi desktop (hidden di mobile) */}
-        <nav className="space-x-6 hidden md:flex items-center">
-          {navLinks.map(renderLink)}
-        </nav>
-
-        {/* Tombol toggle menu mobile */}
-        <button
-          className="md:hidden text-gray-700 focus:outline-none"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-          aria-expanded={menuOpen}
-          aria-controls="mobile-menu"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            {menuOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
-        </button>
-      </div>
-
-      {/* Menu mobile (toggle dengan state menuOpen) */}
-      <div
-        id="mobile-menu"
-        className={`md:hidden absolute top-full left-0 w-full bg-white shadow-md px-6 py-4 space-y-4 transition-all duration-300 ${
-          menuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
+    <>
+      <header
+        ref={ref}
+        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+          // Efek ketika di-scroll
+          isScrolled ? 'bg-white shadow' : 'bg-white/80 backdrop-blur-md'
         }`}
-        aria-hidden={!menuOpen}
       >
-        {navLinks.map(renderLink)}
-      </div>
-    </header>
+        {/* Container utama navbar */}
+        <div className="max-w-9xl mx-auto px-6 py-4 flex justify-between items-center">
+          {/* Logo dengan link ke home */}
+          <Link
+            to="/"
+            onClick={handleLogoClick}
+            className="flex items-center gap-2 hover:opacity-80 transition"
+            aria-label="Home"
+            state={{ shouldScrollToTop: true }}
+          >
+            <img src={logo} alt="Logo" className="h-8 w-8 object-contain" />
+            <span className="text-xl font-bold text-blue-600">TechSpark</span>
+          </Link>
+
+          {/* Navigasi desktop (hidden di mobile) */}
+          <nav className="space-x-6 hidden md:flex items-center">
+            {navLinks.map(renderLink)}
+          </nav>
+
+          {/* Tombol toggle menu mobile */}
+          <button
+            className="md:hidden text-gray-700 focus:outline-none"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {menuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
+
+        {/* Menu mobile (toggle dengan state menuOpen) */}
+        <div
+          id="mobile-menu"
+          className={`md:hidden absolute top-full left-0 w-full bg-white shadow-md px-6 py-4 space-y-4 transition-all duration-300 ${
+            menuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
+          }`}
+          aria-hidden={!menuOpen}
+        >
+          {navLinks.map(renderLink)}
+        </div>
+      </header>
+
+      {/* Modal Join Us */}
+      {showJoinModal && (
+        <div className="fixed inset-0 z-[999] flex items-center justify-center bg-black/40">
+          <div className="relative bg-white rounded-xl shadow-2xl max-w-md w-full mx-4">
+            {/* Tombol close */}
+            <button
+              className="absolute top-3 right-3 text-gray-500 hover:text-blue-600 text-2xl"
+              onClick={() => setShowJoinModal(false)}
+              aria-label="Tutup"
+            >
+              &times;
+            </button>
+            <div className="p-6">
+              <h2 className="text-xl font-bold mb-4 text-blue-700">Join Us</h2>
+              <JoinUsModalForm onClose={() => setShowJoinModal(false)} />
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 });
 
 export default Navbar;
+
+// Komponen form modal dengan mailto
+function JoinUsModalForm({ onClose }) {
+  const [form, setForm] = useState({
+    nama: '',
+    email: '',
+    nomor: '',
+    alasan: '',
+  });
+
+  const handleChange = e => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    const subject = encodeURIComponent('Form Bergabung');
+    const body = encodeURIComponent(
+      `Nama: ${form.nama}\nEmail: ${form.email}\nNomor: ${form.nomor}\nAlasan Ingin Bergabung: ${form.alasan}`
+    );
+    window.location.href = `mailto:suratmaknakarya@gmail.com?subject=${subject}&body=${body}`;
+    onClose();
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <div>
+        <label className="block text-sm font-medium text-gray-700">Nama</label>
+        <input
+          type="text"
+          name="nama"
+          required
+          value={form.nama}
+          onChange={handleChange}
+          className="w-full border rounded px-3 py-2 mt-1"
+        />
+      </div>
+      <div>
+        <label className="block text-sm font-medium text-gray-700">Email</label>
+        <input
+          type="email"
+          name="email"
+          required
+          value={form.email}
+          onChange={handleChange}
+          className="w-full border rounded px-3 py-2 mt-1"
+        />
+      </div>
+      <div>
+        <label className="block text-sm font-medium text-gray-700">Nomor WhatsApp</label>
+        <input
+          type="tel"
+          name="nomor"
+          required
+          value={form.nomor}
+          onChange={handleChange}
+          className="w-full border rounded px-3 py-2 mt-1"
+        />
+      </div>
+      <div>
+        <label className="block text-sm font-medium text-gray-700">Alasan Bergabung</label>
+        <textarea
+          name="alasan"
+          required
+          value={form.alasan}
+          onChange={handleChange}
+          className="w-full border rounded px-3 py-2 mt-1"
+          rows={3}
+        ></textarea>
+      </div>
+      <button
+        type="submit"
+        className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
+      >
+        Kirim
+      </button>
+    </form>
+  );
+}

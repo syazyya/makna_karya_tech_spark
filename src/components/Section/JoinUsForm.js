@@ -24,7 +24,7 @@ const FormGabung = ({ navHeight = 0 }) => {
       `Nama: ${nama}\nEmail: ${email}\nNomor: ${nomor}\nAlasan Ingin Bergabung: ${alasan}`
     );
 
-    window.location.href = `mailto:maxrahadian@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:suratmaknakarya@gmail.com?subject=${subject}&body=${body}`;
 
     setFormData({ nama: '', email: '', nomor: '', alasan: '' });
   };
@@ -35,10 +35,10 @@ const FormGabung = ({ navHeight = 0 }) => {
       className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50"
       style={{ minHeight: navHeight ? `calc(100vh - ${navHeight}px)` : '100vh' }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center py-16 md:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full max-w-6xl">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 flex items-center justify-center py-16 md:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full max-w-5xl">
           {/* Form Section */}
-          <div className="bg-white rounded-xl shadow-xl overflow-hidden" data-aos="fade-right">
+          <div className="bg-white rounded-xl shadow-xl overflow-hidden mx-2 sm:mx-0 mr-6" data-aos="fade-right">
             <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-6 text-center">
               <h1 className="text-2xl md:text-3xl font-bold text-white">Bergabung Bersama Kami</h1>
               <p className="text-blue-100 mt-2">
@@ -46,7 +46,7 @@ const FormGabung = ({ navHeight = 0 }) => {
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="p-6 sm:p-8 space-y-5">
+            <form onSubmit={handleSubmit} className="p-4 sm:p-8 space-y-5">
               {/* Nama */}
               <div className="space-y-1">
                 <label className="block text-sm font-medium text-gray-700">

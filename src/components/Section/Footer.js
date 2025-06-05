@@ -15,7 +15,9 @@ const Footer = ({ companyName = "Makna Karya Tech Spark", email = "suratmaknakar
           {/* Company Info */}
           <div>
             <h3 className="text-xl font-bold mb-4">{companyName}</h3>
-            <p className="text-gray-300">Building the future of technology through innovation.</p>
+            <p className="text-gray-300">Mulai
+Ciptakan Karya
+dan Beri Makna.</p>
           </div>
 
           {/* Quick Links */}
@@ -25,7 +27,7 @@ const Footer = ({ companyName = "Makna Karya Tech Spark", email = "suratmaknakar
               <li><a href="/" className="hover:text-blue-400 transition-colors">Home</a></li>
               <li><a href="/about" className="hover:text-blue-400 transition-colors">About</a></li>
               <li><a href="/news" className="hover:text-blue-400 transition-colors">News</a></li>
-              <li><a href="#pricing" className="hover:text-blue-400 transition-colors">Pricing</a></li>
+              {/* <li><a href="#pricing" className="hover:text-blue-400 transition-colors">Pricing</a></li> */}
             </ul>
           </div>
 
@@ -38,7 +40,7 @@ const Footer = ({ companyName = "Makna Karya Tech Spark", email = "suratmaknakar
                 {email}
               </a>
             </div>
-            <p className="text-gray-300">123 Tech Street, Innovation City</p>
+            <p className="text-gray-300">Jl.Pahlawan No 70 Bdg PKJB</p>
           </div>
 
           {/* Social Media */}
@@ -79,7 +81,7 @@ const Footer = ({ companyName = "Makna Karya Tech Spark", email = "suratmaknakar
 
         {/* Copyright */}
         <div className="mt-12 pt-6 border-t border-gray-700 text-center text-gray-400">
-          <p>&copy; {currentYear} {companyName}. All rights reserved.</p>
+          <p>&copy; {currentYear} {companyName} V.1.2  All rights reserved.</p>
         </div>
       </div>
     </footer>
