@@ -11,7 +11,7 @@ export default function Berita3() {
         category="Karier Teknologi"
         image="https://lh7-rt.googleusercontent.com/docsz/AD_4nXduCXuk8FsWhPejbP6fyDndjFp1d5Is5iCBEeWID-QJiNZmwVXjFObqntTLYIZC66ne6sTnxYcMnhl95gTFU0PTExa4vy2_q3Qwrk7AcxfPAV3LVvY7GIvxO4miuowavruS8PBeYVASBEIcCw5CUd36jnJrIWUOxOu6eK2C3HjoXCh_SVwWYx8?key=pfiTtLfCK9oc95qD-hhoZg"
       >
-       <div className="max-w-3xl mx-auto px-4 py-8">
+       
   <h1 className="text-4xl font-bold text-gray-800 mb-6">
     5 Tips Menjadi Programmer yang Lebih Baik
   </h1>
@@ -68,7 +68,7 @@ export default function Berita3() {
     Dunia programming terus berubah. Developer yang sukses adalah mereka yang terus belajar dan cepat beradaptasi.
     Ikuti perkembangan teknologi, eksplorasi hal baru, dan jangan takut untuk keluar dari zona nyaman Anda.
   </p>
-</div>
+
 
       </ArticleLayout>
 
