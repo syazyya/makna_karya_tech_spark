@@ -62,7 +62,7 @@ dan Beri Makna.</p>
                 <FaLinkedin />
               </a>
               <a
-                href="https://instagram.com/techspark"
+                href="https://www.instagram.com/maknadessert?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 aria-label="Instagram"
                 className="hover:text-blue-400 transition-colors text-xl"
               >
