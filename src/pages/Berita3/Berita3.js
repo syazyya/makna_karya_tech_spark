@@ -12,10 +12,6 @@ export default function Berita3() {
         image="https://lh7-rt.googleusercontent.com/docsz/AD_4nXduCXuk8FsWhPejbP6fyDndjFp1d5Is5iCBEeWID-QJiNZmwVXjFObqntTLYIZC66ne6sTnxYcMnhl95gTFU0PTExa4vy2_q3Qwrk7AcxfPAV3LVvY7GIvxO4miuowavruS8PBeYVASBEIcCw5CUd36jnJrIWUOxOu6eK2C3HjoXCh_SVwWYx8?key=pfiTtLfCK9oc95qD-hhoZg"
       >
        
-  <h1 className="text-4xl font-bold text-gray-800 mb-6">
-    5 Tips Menjadi Programmer yang Lebih Baik
-  </h1>
-
   <p className="text-gray-700 text-lg mb-6">
     Menjadi programmer yang lebih baik bukan hanya soal menguasai bahasa pemrograman terbaru,
     tetapi juga memahami cara berpikir, menyusun kode, dan terus berkembang. Dalam dunia teknologi
