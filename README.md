@@ -8,13 +8,17 @@
 | Hero Section    | Sagara           |
 | About Section   | Hasya            |
 | Media Section   | Agni             |
-| Join Us Section | Ikang            |
+| Join Us Section | Rahadian         |
 | Footer          | Sagara           |
 
 
-
-
-
+New Update V.1.2
+-Melengkapi Media Section ( Agni )
+-Memperbaiki Fungsi Form Join Us ( Rahadian )
+-Mengkonsistenkan Content News Page ( Sagara,Rahadian,Hasya )
+-Memperbaiki Layout yang kurang ( Sagara )
+-Melengkapi Link di Footer ( Hasya )
+-Melengkapi Activity Keikutsertaan Contributor ( Sagara,Rahadian,Agni,Hasya )
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
