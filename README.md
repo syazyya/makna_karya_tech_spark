@@ -4,12 +4,13 @@
 
 | Section         | Kolaborasi       |
 | --------------- | ---------------- |
-| Navigation Bar  | Ikang            |
+| Navigation Bar  | Rahadian         |
 | Hero Section    | Sagara           |
-| About Section   | Hasya            |
+| About Section   | Agni             |
 | Media Section   | Agni             |
 | Join Us Section | Rahadian         |
 | Footer          | Sagara           |
+| Logo            | Hasya            |
 
 
 New Update V.1.2
