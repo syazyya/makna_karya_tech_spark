@@ -8,6 +8,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ScrollToTop from './components/common/ScrollToTop';
 import MainPage from './pages/MainPage';  // Ganti path import
+import NewsDetail from './pages/NewsDetail';
 
 
 import Berita1 from "./pages/Berita1/Berita1";
@@ -44,7 +45,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/media" element={<Media />} />
         <Route path="/news" element={<NewsPage />} />
-
+        <Route path="/news/:slug" element={<NewsDetail />} />
+        
         <Route path="/berita1" element={<Berita1 />} />
         <Route path="/berita2" element={<Berita2 />} />
         <Route path="/berita3" element={<Berita3 />} />
@@ -52,6 +54,8 @@ function App() {
         <Route path="/berita5" element={<Berita5 />} />
 
       </Routes>
+
+      
     </>
   );
 }
